@@ -25,3 +25,7 @@ readinessProbe:
   initialDelaySeconds: 5
   periodSeconds: 10
 
+ingress:
+  enabled: true
+  host: app.local
+
