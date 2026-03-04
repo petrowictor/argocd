@@ -1,0 +1,27 @@
+replicaCount: 1
+
+image:
+  repository: app
+  tag: "1.0"
+  pullPolicy: Never
+
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 8080
+
+config:
+  APP_MESSAGE: "Hello from my custom Go app!"
+
+livenessProbe:
+  enabled: true
+  path: /
+  initialDelaySeconds: 5
+  periodSeconds: 10
+
+readinessProbe:
+  enabled: true
+  path: /
+  initialDelaySeconds: 5
+  periodSeconds: 10
+
