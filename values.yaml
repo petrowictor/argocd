@@ -1,4 +1,4 @@
-replicaCount: 3
+replicaCount: 1
 
 image:
   repository: app
@@ -11,7 +11,7 @@ service:
   targetPort: 8080
 
 config:
-  APP_MESSAGE: "Hello from my custom Go app!"
+  APP_MESSAGE: "Service is ready to Work"
 
 livenessProbe:
   enabled: true
