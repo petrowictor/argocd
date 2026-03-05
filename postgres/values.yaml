@@ -1,0 +1,10 @@
+postgresql:
+  auth:
+    username: appuser
+    password: apppassword
+    database: appdb
+
+  primary:
+    persistence:
+      enabled: true
+      size: 1Gi
